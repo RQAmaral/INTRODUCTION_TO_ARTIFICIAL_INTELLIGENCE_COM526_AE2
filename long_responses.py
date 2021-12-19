@@ -6,7 +6,7 @@ def unknown():
     response = ['Could you please re-phrase that?',
                 '...',
                 'Sounds about right',
-                'What does that mean?'
+                'What does that mean?',
                 '...What?',
                 'I don\'t have a response for that'][random.randrange(6)]
     return response
