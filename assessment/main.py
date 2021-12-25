@@ -76,13 +76,13 @@ def bot_response(user_input):
             break
 
     if response_flag == 0:
-        bot_response = bot_response+' '+"Sorry i didn't understant ;("
+        bot_response = bot_response+' '+"Sorry i didn't understand ;("
     setence_list.remove(user_input)
 
     return bot_response
 
 #Starting the chat
-print('#something we gotta decide')
+print('Hello I am your friendly chatbot, and im here to help you to understand a litle bit more about machine learning!Please make me a question!')
 
 exit_list = ['exit','see you later','bye']
 
