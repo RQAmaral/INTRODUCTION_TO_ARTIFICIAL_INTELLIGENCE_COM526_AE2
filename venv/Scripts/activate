@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\J\Desktop\assessments and uni doc\COM 526\ASSESSMENT\INTRODUCTION_TO_ARTIFICIAL_INTELLIGENCE_COM526_AE2\venv"
+VIRTUAL_ENV="C:\Users\J\Desktop\assessments and uni doc\COM 526\ASSESSMENT\INTRODUCTION_TO_ARTIFICIAL_INTELLIGENCE_COM526_AE2\assessment\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
