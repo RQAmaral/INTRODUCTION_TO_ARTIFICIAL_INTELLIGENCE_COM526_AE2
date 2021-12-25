@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 nltk.download('punkt', quiet=True)
 
 #Getting Articles
-article=Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
+article = Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
 article.download()
 article.parse()
 article.nlp()
@@ -41,7 +41,7 @@ def greeting_response(text):
 
 def index_sort(list_var):
     length = len(list_var)
-    list_index = list(range(0,length))
+    list_index = list(range(0, length))
 
     x = list_var
     for i in range(length):
