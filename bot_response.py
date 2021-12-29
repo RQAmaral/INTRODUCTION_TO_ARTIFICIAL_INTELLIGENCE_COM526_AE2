@@ -6,10 +6,15 @@ from newspaper import Article
 
 #Getting Articles
 article=Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
-article.download()
-article.parse()
-article.nlp()
-corpus = article.text
+article2=Article('https://en.wikipedia.org/wiki/Amazon_(company)')
+article_list = [article, article2]
+
+for article in article_list:
+    article.download()
+    article.parse()
+    article.nlp()
+
+    corpus = article.text
 
 #Downloading punkt package:
 nltk.download('punkt', quiet=True)
@@ -54,7 +59,7 @@ def bot_response(user_input):
             break
 
     if response_flag == 0:
-        bot_response = bot_response+' '+"Sorry i didn't understant ;("
+        bot_response = bot_response+' '+"Sorry i didn't understand :("
     sentence_list.remove(user_input)
 
     return bot_response
