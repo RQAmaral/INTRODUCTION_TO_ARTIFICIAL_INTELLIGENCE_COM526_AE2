@@ -6,9 +6,8 @@ from newspaper import Article
 import main
 
 #Getting Articles
-
-article=Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
-article2=Article('https://en.wikipedia.org/wiki/A')
+article = Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
+article2 = Article('https://en.wikipedia.org/wiki/Amazon(company)')
 article_list = [article, article2]
 
 for article in article_list:

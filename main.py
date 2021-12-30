@@ -4,6 +4,7 @@ import string
 import numpy as np
 import warnings
 import bot_response as br
+import window_render
 warnings.filterwarnings("ignore")
 
 #Starting the chat
@@ -26,16 +27,15 @@ def main():
 
             else:
                 print('Bot:'+br.bot_response(user_input))
-    print("plase select what you want to know about")
-    user_article=input()
+
 
 #Function which return a random response to users greeting
 def greeting_response(text):
     text = text.lower()
 
-    bot_greetings = ['Hello', 'Hey', 'Hiya', 'Sup']
+    bot_greetings = ['hello', 'hey', 'hiya', 'sup','hi']
 
-    user_greetings = ['hello', 'hey', 'hiya', 'sup']
+    user_greetings = ['hello', 'hey', 'hiya', 'sup','hi']
 
     for word in text.split():
         if word in user_greetings:
