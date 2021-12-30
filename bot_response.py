@@ -3,10 +3,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 from newspaper import Article
+import main
 
 #Getting Articles
+
 article=Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
-article2=Article('https://en.wikipedia.org/wiki/Amazon_(company)')
+article2=Article('https://en.wikipedia.org/wiki/A')
 article_list = [article, article2]
 
 for article in article_list:

@@ -11,6 +11,7 @@ def main():
 
     print('Welcome to the chatbot! Say Hello to start a conversation!')
 
+
     exit_list = ['exit','see you later','bye']
 
     while (True):
@@ -25,7 +26,8 @@ def main():
 
             else:
                 print('Bot:'+br.bot_response(user_input))
-
+    print("plase select what you want to know about")
+    user_article=input()
 
 #Function which return a random response to users greeting
 def greeting_response(text):
@@ -33,7 +35,7 @@ def greeting_response(text):
 
     bot_greetings = ['Hello', 'Hey', 'Hiya', 'Sup']
 
-    user_greetings = ['Hello', 'Hey', 'Hiya', 'Sup']
+    user_greetings = ['hello', 'hey', 'hiya', 'sup']
 
     for word in text.split():
         if word in user_greetings:
