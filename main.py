@@ -4,6 +4,7 @@ import string
 import numpy as np
 import warnings
 import bot_response as br
+import window_render
 warnings.filterwarnings("ignore")
 
 #Starting the chat
