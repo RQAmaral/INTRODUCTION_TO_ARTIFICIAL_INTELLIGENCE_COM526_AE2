@@ -7,8 +7,8 @@ import main
 
 #Getting Articles
 article = Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
-article2 = Article('https://en.wikipedia.org/wiki/Amazon(company)')
-article_list = [article, article2]
+
+article_list = [article]
 
 for article in article_list:
     article.download()
