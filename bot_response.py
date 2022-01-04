@@ -1,4 +1,5 @@
 #importing libraries:
+from re import search
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
@@ -7,8 +8,9 @@ import main
 
 #Getting Articles
 article = Article('https://www.sas.com/en_in/insights/analytics/machine-learning.html')
+article2 = Article('https://pt.wikipedia.org/wiki/Google')
 
-article_list = [article]
+article_list = [article,article2]
 
 for article in article_list:
     article.download()
@@ -39,8 +41,12 @@ def index_sort(list_var):
 
     return list_index
 
-def bot_response(user_input):
-    user_input  = user_input.lower()
+def bot_response(message):
+
+    print(message)
+    user_input = ''.join(message)
+    #print(user_input)
+    
     sentence_list.append(user_input)
     bot_response = ''
     cm = CountVectorizer().fit_transform(sentence_list)
@@ -60,7 +66,7 @@ def bot_response(user_input):
             break
 
     if response_flag == 0:
-        bot_response = bot_response+' '+"Sorry i didn't understand :("
+        bot_response = bot_response+"Sorry i didn't understand :("
     sentence_list.remove(user_input)
 
     return bot_response
