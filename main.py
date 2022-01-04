@@ -8,6 +8,7 @@ warnings.filterwarnings("ignore")
 import long_responses as long
 import re
 
+
 #Starting the chat
 def main():
 
@@ -25,11 +26,12 @@ def main():
             break
         
         else:
-            if check_all_messages(user_input) != None:
-                print('Bot:'+check_all_messages(user_input))
+            if check_all_messages(get_response(user_input)) != None:
+                print('Bot:'+check_all_messages(get_response(user_input)))
 
             else:
                 print('Bot:'+br.bot_response(user_input))
+    #wr.mainloop()
 
 
 def message_probability(user_message, recognised_words, single_response=False, required_words=[]):
@@ -70,11 +72,16 @@ def check_all_messages(message):
     response('See you!', ['bye', 'goodbye'], single_response=True)
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
     response('You\'re welcome!', ['thank', 'thanks'], single_response=True)
-    response('Thank you!', ['i', 'love', 'code', 'palace'], required_words=['code', 'palace'])
+
 
     # Longer responses
     response(long.R_ADVICE, ['give', 'advice'], required_words=['advice'])
     response(long.R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
+    response(long.R_JOKE, ['tell', 'joke'], required_words=['joke'])
+    response(long.R_LIKE, ['i','like', 'you'], required_words=['like', 'you'])
+    response(long.R_WULIKE, ['what','do','you','like'],required_words=['what','you','like'])
+    response(long.R_ANGRY,['i','am','mad','angry','sad'],required_words=['i'])
+    response(long.R_NAME,['tell','your','name'],required_words=['your','name'])
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
     # print(highest_prob_list)
