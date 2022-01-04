@@ -5,7 +5,7 @@ import google_searcher2 as gr2
 import response_management as rm
 
 #Starting the chat
-if __name__ == "__main__":
+def main():
 
     print('Welcome to the chatbot! Say Hello to start a conversation!')
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
             break
         
         elif user_input.lower().startswith('google search'):
-            gr2.search(user_input.split())
+            print(gr2.google_search())
 
         else:
             if rm.check_all_messages(user_input) != None:
@@ -28,3 +28,6 @@ if __name__ == "__main__":
 
             else:
                print('Bot: ' + rm.get_response(user_input))
+
+if __name__ == "__main__":
+    main()
