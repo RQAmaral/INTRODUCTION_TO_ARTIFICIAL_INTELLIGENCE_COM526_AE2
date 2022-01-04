@@ -1,4 +1,3 @@
-import bot_response as br
 from re import split
 import numpy as np
 import google_searcher2 as gs
@@ -29,6 +28,12 @@ def check_all_messages(message):
     # Longer responses
     response(long.R_ADVICE, ['give', 'advice'], required_words=['advice'])
     response(long.R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
+    response(long.R_JOKE, ['tell', 'joke'], required_words=['joke'])
+    response(long.R_LIKE, ['i','like', 'you'], required_words=['like', 'you'])
+    response(long.R_WULIKE, ['what','do','you','like'],required_words=['what','you','like'])
+    response(long.R_ANGRY,['i','am','mad','angry','sad'],required_words=['i'])
+    response(long.R_NAME,['tell','your','name'],required_words=['your','name'])
+
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
 

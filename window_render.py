@@ -5,7 +5,7 @@ window.title("ChatBot")
 window.geometry('500x300')
 
 
-label = Label(window, text=user(),fg='blue',font=('Arial',14))
+label = Label(window, text='hola ninhooooo',fg='blue',font=('Arial',14))
 label.grid(row=0,column=0,padx=5,pady=10)
 
 data=StringVar()
