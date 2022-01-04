@@ -1,4 +1,3 @@
-import bot_response as br
 from re import split
 import numpy as np
 import google_searcher2 as gs

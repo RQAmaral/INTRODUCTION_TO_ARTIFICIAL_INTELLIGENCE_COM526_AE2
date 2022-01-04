@@ -1,6 +1,5 @@
 #importing libraries:
 from numpy import split
-import bot_response as br
 import google_searcher2 as gr2
 import response_management as rm
 
