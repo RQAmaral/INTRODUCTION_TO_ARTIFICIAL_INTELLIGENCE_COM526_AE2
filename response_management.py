@@ -24,15 +24,16 @@ def check_all_messages(message):
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how', 'are', 'you'])
     response('You\'re welcome!', ['thank', 'thanks'], single_response=True)
     response('I love you too!', ['i', 'love', 'you'], required_words=['i', 'love', 'you'])
-    
+
     # Longer responses
     response(long.R_ADVICE, ['give', 'advice'], required_words=['advice'])
     response(long.R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
-    response(long.R_JOKE, ['tell', 'joke'], required_words=['joke'])
+    response(long.joke(), ['tell', 'joke'], required_words=['joke'])
     response(long.R_LIKE, ['i','like', 'you'], required_words=['like', 'you'])
     response(long.R_WULIKE, ['what','do','you','like'],required_words=['what','you','like'])
-    response(long.R_ANGRY,['i','am','mad','angry','sad'],required_words=['i'])
+    response(long.R_ANGRY,['i','am','not','happy'],required_words=['not', 'happy'])
     response(long.R_NAME,['tell','your','name'],required_words=['your','name'])
+    response(long.R_GRESP,['i','am','good'], required_words=['i','good'])
 
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
