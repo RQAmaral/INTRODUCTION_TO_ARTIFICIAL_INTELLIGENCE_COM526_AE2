@@ -17,7 +17,7 @@ def send():
 
     txt.insert(END, "\n" + send)
     e.delete(0, END)
-    txt.see(END)
+    
 
     return user_input
 
@@ -40,13 +40,16 @@ def logic():
             txt.insert(END, "\n" +'Bot: Type what you would like to search on the console!')
             search = gr2.google_search()
             txt.insert(END, "\n" + 'Bot: ' +  search)
+            txt.see(END)
 
         else:
             if rm.check_all_messages(user_input) != None:
                 txt.insert(END, "\n" +'Bot: ' + rm.get_response(user_input))
+                txt.see(END)
 
             else:
                 txt.insert(END, "\n" +'Bot: ' + rm.get_response(user_input))
+                txt.see(END)
 
 #----------------------------------------------------------------------------
 send_button = Button(window, text='Send', command = logic).grid(row=1, column=1)
